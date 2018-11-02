@@ -17,8 +17,7 @@
             app:expandedTitleMarginStart="72dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:collapsedTitleGravity="right|bottom"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:elevation="6dp">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <FrameLayout
                 android:id="@+id/photo_container"
@@ -64,11 +63,11 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:nestedScrollingEnabled="true"
+        android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
@@ -87,7 +86,7 @@
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
 
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 
